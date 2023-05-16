@@ -219,14 +219,14 @@ def convert_contours_to_jpg(input_image_path, output_image_path):
 
     print("Image with contours saved as", output_image_path)
 
-# output_file = capture_photo(camera_index, output_file)
+output_file = capture_photo(camera_index, output_file)
 
 threshold = 240
 # ^^ Adjust this value to change the threshold ^^
 
-source = Image.open(image_path)
+source = Image.open(output_file)
 source.show()
-image_path = modify_image(image_path, 90)
+image_path = modify_image(output_file, 90)
 
 
 # image_path = convert_to_black_and_white(image_path, threshold)
